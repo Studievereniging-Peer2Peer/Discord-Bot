@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "lib": ["esnext"],
+    "paths": {
+      "*": ["node_modules/*"]
+    },
+    "outDir": "dist"
+  },
+  "include": ["src/**/*", "typings/*"]
+}
