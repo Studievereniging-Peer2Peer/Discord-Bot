@@ -1,0 +1,12 @@
+{
+  "extends": "./node_modules/gts/tsconfig-google.json",
+  "compilerOptions": {
+    "baseUrl": "src/",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "declaration": false,
+    "sourceMap": false,
+    "outDir": "build"
+  },
+  "include": ["src/**/*.ts", "tests/**/*.test.ts", "tests/**/*.ts"]
+}
