@@ -1,17 +1,12 @@
 {
+  "extends": "./node_modules/gts/tsconfig-google.json",
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
+    "baseUrl": "src/",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "noImplicitAny": true,
-    "moduleResolution": "node",
-    "baseUrl": ".",
-    "lib": ["esnext"],
-    "paths": {
-      "*": ["node_modules/*"]
-    },
-    "outDir": "dist"
+    "declaration": false,
+    "sourceMap": false,
+    "outDir": "build"
   },
-  "include": ["src/**/*", "typings/*"]
+  "include": ["src/**/*.ts", "tests/**/*.test.ts", "tests/**/*.ts"]
 }

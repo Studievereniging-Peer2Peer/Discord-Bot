@@ -1,7 +1,7 @@
-import { CommandInteraction, SlashCommandBuilder } from 'discord.js';
-import { Command } from '../../typings';
+import {CommandInteraction, SlashCommandBuilder} from 'discord.js';
+import {Command} from '../types';
 
-const pingCommand: Command = {
+export const PingCommand: Command = {
   data: new SlashCommandBuilder()
     .setName('ping')
     .setDescription('Replies with Pong!'),
@@ -9,5 +9,3 @@ const pingCommand: Command = {
     await interaction.reply('Pong!');
   },
 };
-
-export default pingCommand;
