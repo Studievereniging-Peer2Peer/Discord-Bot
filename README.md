@@ -12,11 +12,6 @@ Aangezien de bot geschreven is in Typescript, moet de broncode eerst gebuild wor
 npm run build
 ```
 
-Wanneer je de bot voor het eerst draait of je nieuwe commando's hebt toegevoegd moet je deze eerst in Discord registreren:
-```
-npm run deploy-commands
-```
-
 De server kan gestart worden met het volgende commando
 ```
 npm run start
