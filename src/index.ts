@@ -1,9 +1,12 @@
 import dotenv from 'dotenv';
+import cron from 'node-cron';
 import {Client, Events, GatewayIntentBits} from 'discord.js';
 import {commands, loadCommands} from './commandMap';
 import {registerCommands} from './registerCommands';
 import {Command} from './types';
 import {handleCommand} from './commandHandler';
+import {prisma} from './client';
+import {sendBirthdayCongratulations} from './events/birthdays';
 
 // Load environment variables
 dotenv.config();
@@ -27,4 +30,8 @@ dotenv.config();
   );
 
   client.login(process.env.DISCORD_TOKEN);
-})();
+
+  cron.schedule('*/30 * * * * *', async () => {
+    await sendBirthdayCongratulations(client);
+  });
+})().finally(() => prisma.$disconnect());
