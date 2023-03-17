@@ -8,6 +8,9 @@ import {
 } from 'discord.js';
 import {Command} from '../types';
 
+/*
+ * Set channel for a given type of notifications
+ */
 export const NotificationChannelCommand: Command = {
   data: new SlashCommandBuilder()
     .setName('notification_channel')

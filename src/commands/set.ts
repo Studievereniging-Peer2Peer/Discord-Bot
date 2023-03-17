@@ -3,6 +3,9 @@ import {CommandInteraction, SlashCommandBuilder} from 'discord.js';
 import {Command} from '../types';
 import {parse, isValid} from 'date-fns';
 
+/*
+ * Set the user's birthday
+ */
 export const SetCommand: Command = {
   data: new SlashCommandBuilder()
     .setName('set')
