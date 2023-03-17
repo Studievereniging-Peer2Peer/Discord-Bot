@@ -46,9 +46,9 @@ export const sendBirthdayCongratulations = async (client: Client) => {
     const embed = new EmbedBuilder()
       .setColor(0x76b833)
       .setDescription(
-        `:partying_face: Happy birthday to ${userMention(
+        `:partying_face: Fijne verjaardag voor ${userMention(
           birthday.userId
-        )!} who turned ${ageInYears} today`
+        )!} wie vandaag ${ageInYears} jaar is geworden`
       );
 
     channel.send({embeds: [embed]});

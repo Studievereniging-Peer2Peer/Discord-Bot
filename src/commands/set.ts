@@ -22,7 +22,7 @@ export const SetCommand: Command = {
 
     if (!isValid(birthday)) {
       await interaction.reply({
-        content: 'Please set your birthday in the DD-MM-YYYY format',
+        content: 'Zet je verjaardag alsjeblieft in DD-MM-YYYY formaat',
         ephemeral: true,
       });
       return;
@@ -36,7 +36,7 @@ export const SetCommand: Command = {
     });
 
     await interaction.reply({
-      content: 'Birthday set!',
+      content: 'Je verjaardag is ingesteld!',
       ephemeral: true,
     });
   },
