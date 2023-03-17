@@ -1,5 +1,8 @@
+
 # Peer2Peer-Bot
 De discord bot van Studievereniging Peer2Peer
+
+[![main](https://github.com/Studievereniging-Peer2Peer/Discord-Bot/actions/workflows/main.yml/badge.svg)](https://github.com/Studievereniging-Peer2Peer/Discord-Bot/actions/workflows/main.yml)
 
 ## Aan de slag
 ```
