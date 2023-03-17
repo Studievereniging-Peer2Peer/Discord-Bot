@@ -53,6 +53,4 @@ export const sendBirthdayCongratulations = async (client: Client) => {
 
     channel.send({embeds: [embed]});
   }
-
-  // console.log('Sent congratulations');
 };
