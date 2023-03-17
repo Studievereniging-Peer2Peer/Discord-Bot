@@ -31,7 +31,13 @@ dotenv.config();
 
   client.login(process.env.DISCORD_TOKEN);
 
-  cron.schedule('0 0 * * * *', async () => {
-    await sendBirthdayCongratulations(client);
-  });
+  cron.schedule(
+    '0 0 * * * *',
+    async () => {
+      await sendBirthdayCongratulations(client);
+    },
+    {
+      timezone: 'Europe/Amsterdam',
+    }
+  );
 })().finally(() => prisma.$disconnect());
