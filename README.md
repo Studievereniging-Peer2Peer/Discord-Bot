@@ -1,5 +1,8 @@
+
 # Peer2Peer-Bot
 De discord bot van Studievereniging Peer2Peer
+
+[![main](https://github.com/Studievereniging-Peer2Peer/Discord-Bot/actions/workflows/main.yml/badge.svg)](https://github.com/Studievereniging-Peer2Peer/Discord-Bot/actions/workflows/main.yml)
 
 ## Aan de slag
 ```
@@ -10,11 +13,6 @@ npm install
 Aangezien de bot geschreven is in Typescript, moet de broncode eerst gebuild worden:
 ```
 npm run build
-```
-
-Wanneer je de bot voor het eerst draait of je nieuwe commando's hebt toegevoegd moet je deze eerst in Discord registreren:
-```
-npm run deploy-commands
 ```
 
 De server kan gestart worden met het volgende commando

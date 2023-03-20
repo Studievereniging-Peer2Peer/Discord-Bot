@@ -4,4 +4,5 @@ module.exports = {
   coverageDirectory: './coverage',
   preset: 'ts-jest',
   testEnvironment: 'node',
+  setupFilesAfterEnv: ['<rootDir>/tests/singleton.ts'],
 };

@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model NotificationChannel {
+  id        Int    @id @default(autoincrement())
+  event     String @unique @db.VarChar(255)
+  guildId   String @db.VarChar(255)
+  channelId String @db.VarChar(255)
+}
+
+model Birthday {
+  id       Int      @id @default(autoincrement())
+  userId   String   @unique @db.VarChar(255)
+  birthday DateTime
+}

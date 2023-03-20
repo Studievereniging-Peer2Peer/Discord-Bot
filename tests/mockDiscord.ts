@@ -1,4 +1,11 @@
-import {Client, CommandInteraction, Guild, GuildMember, User} from 'discord.js';
+import {
+  ChatInputCommandInteraction,
+  Client,
+  CommandInteraction,
+  Guild,
+  GuildMember,
+  User,
+} from 'discord.js';
 
 export default class MockDiscord {
   public client!: Client;
@@ -7,7 +14,7 @@ export default class MockDiscord {
   public guildMember!: GuildMember;
   public interaction!: CommandInteraction;
 
-  constructor(options: {command?: {commandName: string}}) {
+  constructor(options: {command?: {name: string}}) {
     this.mockClient();
     this.mockGuild();
     this.mockUser();
@@ -99,10 +106,17 @@ export default class MockDiscord {
 
   private mockInteraction(command?: Record<string, string | number>): void {
     if (!command) return;
-    this.interaction = Reflect.construct(CommandInteraction, [
+    this.interaction = Reflect.construct(ChatInputCommandInteraction, [
       this.client,
       {
-        data: command,
+        data: {
+          resolved: {
+            channels: {
+              test: {id: 'test', guild_id: 'test'},
+            },
+          },
+          ...command,
+        },
         id: BigInt(1),
         user: this.guildMember,
       },
