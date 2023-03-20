@@ -28,7 +28,9 @@ export const NotificationChannelCommand: Command = {
     .addChannelOption(option =>
       option
         .setName('channel')
-        .setDescription('The channel the notification should be send in')
+        .setDescription(
+          'Het kanaal waar de notificatie in geplaatst moet worden'
+        )
         .setRequired(true)
     )
     .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),

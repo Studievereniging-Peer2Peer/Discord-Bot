@@ -9,7 +9,7 @@ import {parse, isValid} from 'date-fns';
 export const SetCommand: Command = {
   data: new SlashCommandBuilder()
     .setName('set')
-    .setDescription('Sets your birthday in (DD-MM-YYYY) format')
+    .setDescription('Stelt jouw verjaardag in volgens DD-MM-YYYY formaat')
     .addStringOption(option =>
       option
         .setName('birthday')
