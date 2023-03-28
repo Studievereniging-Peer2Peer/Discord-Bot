@@ -5,6 +5,9 @@ services:
     build: .
     depends_on:
       - postgres
+    command: npm run dev
+    volumes:
+      - ./src:/usr/src/app/src
 
   postgres:
     image: postgres
