@@ -6,7 +6,8 @@
     "skipLibCheck": true,
     "declaration": false,
     "sourceMap": false,
-    "outDir": "build"
+    "outDir": "build",
+    "strict": true
   },
   "include": ["src/**/*.ts", "tests/**/*.test.ts", "tests/**/*.ts"]
 }

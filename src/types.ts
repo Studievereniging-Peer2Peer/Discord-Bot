@@ -4,3 +4,5 @@ export type Command = {
   data: SlashCommandBuilder;
   execute: (interaction: CommandInteraction) => Promise<void>;
 };
+
+export type EventType = 'birthday';
